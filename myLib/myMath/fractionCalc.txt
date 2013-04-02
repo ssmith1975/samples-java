@@ -1,0 +1,133 @@
+   static class MyFraction {
+      
+        // Prime Number?
+        static boolean isPrime(int x) {
+            boolean flag = true;
+            for (int i=2; i<x; i++) {
+                 
+                if((x % i) == 0) {
+                  flag =  false;
+                  break;                
+                } 
+            }
+            return flag;           
+        }
+
+        // Lowest Common Multiple
+        static int findLCM(int num1, int num2) {
+           int lcm=1;
+/*
+           SortedSet s1 = new TreeSet();
+           SortedSet s2 = new TreeSet();
+
+
+           for (int i=1; i<= num2; i++) {
+               s1.add(new Integer(i*num1));
+           }
+           for (int j=1; j<=num1; j++) {
+               s2.add(new Integer(j*num2));
+           }
+
+           Iterator it = s1.iterator();
+
+            while(it.hasNext()) {
+                int checkNum = (Integer)it.next();
+
+                if(s2.contains(checkNum)){
+                  lcm =  checkNum;
+                  break;
+                    //System.out.println("LCM: "+it.next());
+                    //break;
+                }
+            }
+ 
+ */
+           int i = 1;
+           int smallerNum = Math.min(num1,num2);
+           int biggerNum = Math.max(num1, num2);
+           while (i<=biggerNum) {
+               if(i*smallerNum % biggerNum == 0) {
+                   lcm = i*smallerNum;
+                   break;
+               }
+               i++;      
+           }
+           
+           return lcm;
+        }
+        
+        static int findGCF(int num1, int num2) {
+            int gcf=1;
+/*
+           SortedSet s1 = new TreeSet();
+           SortedSet s2 = new TreeSet();
+
+
+           for (int i=num1; i>=1 ; i--) {
+               if(num1%i  == 0){
+                    s1.add(new Integer(i));
+               }
+           }
+           for (int j=num2; j>=1; j--) {
+               if(num2%j == 0) {
+                s2.add(new Integer(j));
+               }
+           }
+
+           Iterator it = s1.iterator() ;
+           
+            while(it.hasNext()) {
+                int checkNum = (Integer)it.next();
+
+                if(s2.contains(checkNum)){
+                  gcf =  checkNum;
+                  
+                    //System.out.println("LCM: "+it.next());
+                    //break;
+                }
+            }
+
+ */
+           int i = 0;
+           int smallerNum = Math.min(num1, num2);
+           int biggerNum = Math.max(num1, num2);
+            while (i<biggerNum) {
+               if(biggerNum%(biggerNum-i)==0 && smallerNum%(biggerNum-i)==0) {
+                   gcf = biggerNum-i;
+                   break;
+               }
+               i++;
+           }
+           return gcf;           
+        }
+
+        // Find Factors
+        static int[] findFactors(int x) {
+          
+           int count = 0;
+           
+           SortedSet s = new TreeSet();
+           for (int i = 1; i<=x; i++) {
+                if (x % i == 0) {
+                    s.add(new Integer(i));
+                    count++;
+                }
+            }
+           
+           int[] factorList = new int[count];
+           Iterator it = s.iterator() ;
+           
+           int index=0;
+
+           while(it.hasNext()) {
+                factorList[index] =(Integer)it.next();
+                index++;        
+           }           
+   
+           return factorList;
+        }
+        
+
+           
+    }
+*/

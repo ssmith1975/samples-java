@@ -1,0 +1,6 @@
+The square of 2 is 4
+The square of 5 is 25
+The square of 11 is 121
+The square of 15 is 225
+The square of 202 is 40804
+The square of 84 is 7056

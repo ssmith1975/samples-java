@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Passing Data 2</string>
+    <string name="hello">Hello world, MainActivity!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Passing Data</string>
+
+</resources>

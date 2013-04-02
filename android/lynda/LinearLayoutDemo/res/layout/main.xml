@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <RadioGroup android:id="@+id/orientation" android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="5px" android:orientation="horizontal">
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:id="@+id/horizontal" android:text="horizontal"></RadioButton>
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/vertical" android:text="vertical"></RadioButton>
+    </RadioGroup>
+    <RadioGroup android:id="@+id/gravity" android:layout_height="wrap_content" android:padding="5px" android:orientation="vertical" android:layout_width="match_parent">
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:id="@+id/left" android:text="left"></RadioButton>
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="center" android:id="@+id/center"></RadioButton>
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="right" android:id="@+id/right"></RadioButton>
+    </RadioGroup>
+</LinearLayout>
